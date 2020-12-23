@@ -1,22 +1,39 @@
-# Project-1: RPN Calculator
-[swe510](https://www.cmpe.boun.edu.tr/tr/courses/swe510)
-2020 Fall by
-[bingol](https://www.cmpe.boun.edu.tr/~bingol)
+
+# SWE 510 Data Structures and Algorithms
+
+<b>Student Name : </b>Sabri Korkmaz
+<br/>
+<b>Submission Date : </b>23/12/2020 
+<br/>
+<b>Project Title : </b> RPN Calculator
+<br/>
+<b>Project Type : </b> Java Based Programming Project
+<br/>
+
+# Introduction
+Bu proje Reverse Polish Notation [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) adlı bir matematiksel hesaplama yöntemi kullanarak işlem yapan bir hesap makinesidir.  Proje calculatore ait  
+
+# RPN Calculator
+- Calculator Interface
 
 
-v2020-12-04
+![RPN calculator](RPNCalculator.png)
+
+- CalculatorEngine
+- Helper
+- Test
 
 
+### Calculator Arayüzü
+
+### CalculatorEngine 
+
+### Test
 
 
-## due 2020-12-23T23:00 by Moodle
+# Installation
 
-See [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) @wikipedia.
-
-
-
-
-## Description
+# Maintenance
 
 Develop an RPN calculator for 4- arithmetic operations (+, -, *, /).
 
@@ -48,8 +65,8 @@ meaning | input | output
 - Your program reads the expression to be evaluated `System.in`.
 - Writes the result to `System.out`.
 - It should work with integers as well as float.
-  That is, `2.1^3.05+` evaluates to `5.15`.
-- Negative numbers are represented as unsigned number followed by "change sign" `c`.
+That is, `2.1^3.05+` evaluates to `5.15`.
+- Negative numbers are represented as unsigned number followed by "change sign" `c`. 
 
 input|meaning
 ---|---:
@@ -70,15 +87,15 @@ input|meaning
 
 ## Bonus points
 
-You get
+You get 
 
-- 20% bonus,
-  if your calculator works with a graphical user interface (GUI).
-  See [HP41](https://en.wikipedia.org/wiki/HP-41C)  for a possible GUI.
-- 5% bonus,
-  if the calculator, in addition to reading unseparated inputs, understands
-  inputs with thousands separated and
-  always produces results with thousands separated.
+- 20% bonus, 
+if your calculator works with a graphical user interface (GUI).
+See [HP41](https://en.wikipedia.org/wiki/HP-41C)  for a possible GUI.
+- 5% bonus, 
+if the calculator, in addition to reading unseparated inputs, understands 
+inputs with thousands separated and 
+always produces results with thousands separated.
 
 
 
@@ -96,10 +113,10 @@ You get
 
 - The code (60%)
 - Testing suit (20%)
-- Documentation (20%).
-  (Note that we are talking about a couple of pages not more than 10 in total.)
+- Documentation (20%). 
+(Note that we are talking about a couple of pages not more than 10 in total.) 
     - Installation manual
-    - User manual
+    - User manual 
     - Maintenance manual
 - Upload to Moodle by 2020-12-23T23:00.
 - Prepare a 5-minute presentation on 2020-12-24 during lecture hours.
