@@ -51,7 +51,7 @@ Calculator Engine is the main structure that contains all transactions. The oper
 - <b>String resetCalculator()</b>
     - Resets the calculator sign as 1 and returns the string 0
 - <b>Stack push(String currentNumber)</b>
-    - Converts the string current number into BigDecimal and push it to the stack
+    - Converts the string current number into BigDecimal and pushes it to the stack
 - <b>Stack clear()</b>
     - Removes all data in the memory and returns an empty array
 - <b>int changeNumberSign()</b>
