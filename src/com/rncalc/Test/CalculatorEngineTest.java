@@ -1,14 +1,11 @@
 package com.rncalc.Test;
 
 import com.rncalc.CalculatorEngine.CalculatorEngine;
-import com.rncalc.CalculatorEngine.ICalculatorEngine;
 import com.rncalc.Enum.OperationType;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.util.Stack;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorEngineTest {
