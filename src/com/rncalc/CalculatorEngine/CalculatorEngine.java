@@ -67,7 +67,7 @@ public class CalculatorEngine implements ICalculatorEngine {
     }
 
     public Stack clear() {
-        _dataPool.empty();
+        _dataPool.clear();
         return _dataPool;
     }
 

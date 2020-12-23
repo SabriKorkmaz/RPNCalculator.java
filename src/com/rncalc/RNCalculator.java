@@ -42,13 +42,15 @@ public class RNCalculator extends JFrame {
     private JLabel labelCurrentNumber;
     private JLabel labelValues;
     private JPanel panel2;
+    private JButton btnClear;
 
     private CalculatorEngine engine;
 
     public RNCalculator() {
         add(panel1);
         setTitle("RNCalculator");
-        setSize(400, 400);
+        setSize(800, 400);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         engine = new CalculatorEngine();
         //<editor-fold desc="btnNumbers">
         btnNumber1.addActionListener(new ActionListener() {
@@ -155,6 +157,13 @@ public class RNCalculator extends JFrame {
                 labelCurrentNumber.setText(engine.resetCalculator());
             }
         });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                engine.clear();
+                labelValues.setText(engine.renderDataPool());
+            }
+        });
         btnNumberType.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -178,6 +187,7 @@ public class RNCalculator extends JFrame {
         });
         //</editor-fold>
     }
+
 
 
 }
