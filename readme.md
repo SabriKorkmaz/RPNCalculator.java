@@ -11,113 +11,71 @@
 <br/>
 
 # Introduction
-Bu proje Reverse Polish Notation [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) adlı bir matematiksel hesaplama yöntemi kullanarak işlem yapan bir hesap makinesidir.  Proje calculatore ait  
+Bu proje Reverse Polish Notation [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) adlı bir matematiksel hesaplama yöntemi kullanarak işlem yapan bir hesap makinesidir. 
 
 # RPN Calculator
-- Calculator Interface
-
-
-![RPN calculator](RPNCalculator.png)
-
-- CalculatorEngine
-- Helper
-- Test
-
 
 ### Calculator Arayüzü
+![RPN calculator](RPNCalculator.png)
+
+1. Ac Button : Removes the current number
+2. Sign Button : Determine sign of current number
+3. Number Panel : Includes all the numbers
+4. Result : Present the result of the calculatiom
+5. Memory : Presenet of the data in the memory
+6. Divide : Divide operation
+7. Multiply : Multiply operation
+8. Summary : Summary operation
+9. Subtract: Subtract operation
+10. Insert : Inserts the current number into the memory
+
+
+Hafızadaki bütün sayılar ^ işareti ile ayrılarak Memory alanında gösterirlir.
 
 ### CalculatorEngine 
+Calculator Engine is the main structure that contains all transactions. The operations and fields are as follows.
 
-### Test
+ #### Fields
+- <b>Stack _dataPool :</b> Stores values of Calculators
+- <b>int Sign :</b> Store the state of current Number sign
 
+#### Methods
+- <b>Stack operation(OperationType type)</b>
+    - Read operation type from parameter and processes values in the _dataPool
+        - OperationType.Sum
+        - OperationType.Multiply
+        - OperationType.Divide
+        - OperationType.Subtract
+- <b>String renderDataPool()</b>
+    - Returns all the values in the _dataPool as a string value like '1^2^3^4'
+- <b>String multiplyNumber(String currentNumber, int number)</b>
+    - Multiply the current number with a specified number
+- <b>String resetCalculator()</b>
+    - Resets the calculator sign as 1 and returns the string 0
+- <b>Stack push(String currentNumber)</b>
+    - Converts the string currentNumber into BigDecimal and push it to the stack
+- <b>Stack clear()</b>
+    - Removes all data in the memory and returns empty array
+- <b>int changeNumberSign()</b>
+    - Changes sign of the engine to the opposite 
+- <b>int currentNumberSing()</b>
+    - Return current sign state of the engine
+
+### StringHelper
+
+It is a helper structure for use in string operations within the Calculator Engine.
+
+#### Methods
+- <b>String formatStr(BigDecimal val) </b>
+    - Reads the number to be edited as a parameter. Formats the value with thousand and decimal seperator
+- <b>String joinNumber(String currentNumber,int newValue,int sign)</b>
+    - Combines the current number, new value, and sign to generate the new number
+- <b> String addSeparator(String value)</b>
+    - Adds seperator to raw current raw number
 
 # Installation
+Right-click on the .jar file in the project to install the application. Then, operations can be performed in the window that opens.
 
 # Maintenance
-
-Develop an RPN calculator for 4- arithmetic operations (+, -, *, /).
-
-- _RPN_ stands for _Reverse Polish Notation_
-    - See [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) @wikipedia.
-    - In addition to binary operations there is an "enter" operation, denoted by `^`.
-    - Note that there is no equal `=`.
-- Examples
-
-meaning | input | output
----|---|---:
-`2^3+`|`2+3=`|`5`
-`2^3-`|`2-3=`|`-1`
-`2^3^4++`|`2+(3+4)=`|`9`
-`2^3^4+-`|`2-(3+4)=`|`-5`
-`2^3^5+*`|`2*(3+5)=`|`16`
-`2^3^5*+`|`2+(3*5)=`|`17`
-`1^2+3+4+`|`1+2+3+4=`|`10`
-`2c^3c-`|`-2-(-3)=`|`1`
-`+=`|`+`|`ERROR`
-`+2=`|`2+`|`ERROR`
-`1-2+=`|`1^2-+`|`ERROR`
-
-
-
-
-## Specification
-
-- Your program reads the expression to be evaluated `System.in`.
-- Writes the result to `System.out`.
-- It should work with integers as well as float.
-That is, `2.1^3.05+` evaluates to `5.15`.
-- Negative numbers are represented as unsigned number followed by "change sign" `c`. 
-
-input|meaning
----|---:
-`1c`|`-1`
-`1cc`|`1`
-`1ccc`|`-1`
-`1.2c`|`-1.2`
-
-- The decimal and thousands separators are `.` and `,`, respectively.
-
-input|meaning
----:|---:
-`1,234.567`|`1234.567`
-`12,345.67c`|`12345.67`
-
-
-
-
-## Bonus points
-
-You get 
-
-- 20% bonus, 
-if your calculator works with a graphical user interface (GUI).
-See [HP41](https://en.wikipedia.org/wiki/HP-41C)  for a possible GUI.
-- 5% bonus, 
-if the calculator, in addition to reading unseparated inputs, understands 
-inputs with thousands separated and 
-always produces results with thousands separated.
-
-
-
-
-## Related Concepts
-
-- [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) (LIFO)
-- [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation)
-- postfix
-
-
-
-
-## Deliverables
-
-- The code (60%)
-- Testing suit (20%)
-- Documentation (20%). 
-(Note that we are talking about a couple of pages not more than 10 in total.) 
-    - Installation manual
-    - User manual 
-    - Maintenance manual
-- Upload to Moodle by 2020-12-23T23:00.
-- Prepare a 5-minute presentation on 2020-12-24 during lecture hours.
-
+The attached files can be used to update the project, or you can contribute via github with the link below.
+[RPNCalculator on Github ](https://github.com/SabriKorkmaz/RPNCalculator.java)
