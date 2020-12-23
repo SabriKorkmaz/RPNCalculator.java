@@ -18,10 +18,10 @@ This project is a calculator using a mathematical calculation method called Reve
 ![RPN calculator](manuel.png)
 
 1. Ac Button: Removes the current number
-2. Sign Button: Determine the sign of the current number
+2. Sign Button: Determines the sign of the current number
 3. Number Panel: Includes all the numbers
-4. Result: Present the result of the calculation
-5. Memory: Present of the data in the memory
+4. Result: Presents the result of the calculation
+5. Memory: Presents of the data in the memory
 6. Divide: Divide operation
 7. Multiply: Multiply operation
 8. Summary: Summary operation
