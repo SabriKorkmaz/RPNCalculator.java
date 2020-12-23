@@ -16,7 +16,7 @@ Bu proje Reverse Polish Notation [RPN](https://en.wikipedia.org/wiki/Reverse_Pol
 # RPN Calculator
 
 ### Calculator Arayüzü
-![RPN calculator](RPNCalculator.png)
+![RPN calculator](manuel.png)
 
 1. Ac Button : Removes the current number
 2. Sign Button : Determine sign of current number
